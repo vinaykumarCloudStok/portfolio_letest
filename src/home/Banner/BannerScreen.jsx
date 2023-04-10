@@ -1,7 +1,7 @@
 import React from 'react'
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
-import Fade from 'react-reveal/Fade';
+
 
 import { Link } from 'react-router-dom';
 import '../Banner/banner.css'
@@ -31,7 +31,7 @@ const BannerScreen = () => {
   return (
     <>
     <section className='home'>
-<Fade top big>
+{/* <Fade top big> */}
 <div className="home-content">
   <h3>Hello, It's Me</h3>
   <h1>Vinay Kumar</h1>
@@ -45,13 +45,13 @@ const BannerScreen = () => {
       <Link to="#" > <BsLinkedin className='icon'/> </Link>
       <Link to="#"> <BsInstagram className='icon'/> </Link>
      </div>
-     <Link className='cv-btn'> Download CV </Link>
+     <Link to="https://drive.google.com/file/d/1pKsOQUed_9naowmqiks1XYFeoA2fZ9Ff/view?usp=sharing" className='cv-btn'> Download CV </Link>
 </div>
 
 <div className="home-img">
   <div className="border-img"></div>
 </div>
-</Fade>
+{/* </Fade>s */}
     </section>
     </>
   )
