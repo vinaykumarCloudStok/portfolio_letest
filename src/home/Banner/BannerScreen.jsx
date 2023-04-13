@@ -41,11 +41,11 @@ const BannerScreen = () => {
      culpa doloremque voluptatibus, iure sapiente, <br /> labore nam esse tenetur vel.</p>
      <div className="social-media">
       <Link to="#" > <BsFacebook className='icon'/> </Link>
-      <Link to="#" > <BsTwitter className='icon'/> </Link>
-      <Link to="#" > <BsLinkedin className='icon'/> </Link>
-      <Link to="#"> <BsInstagram className='icon'/> </Link>
+      <Link to="https://twitter.com/VinayKu04755744?t=6k8mrlxUGDrdBa7ivH8TBA&s=08" target='_blank' > <BsTwitter className='icon'/> </Link>
+      <Link to="https://www.linkedin.com/in/vinay-kumar-4215561a2" target='_blank' > <BsLinkedin className='icon'/> </Link>
+      <Link to="https://instagram.com/vinay_cric18?igshid=ZDdkNTZiNTM=" target='_blank'> <BsInstagram className='icon'/> </Link>
      </div>
-     <Link to="https://drive.google.com/file/d/1pKsOQUed_9naowmqiks1XYFeoA2fZ9Ff/view?usp=sharing" className='cv-btn'> Download CV </Link>
+     <Link to="https://drive.google.com/file/d/1pKsOQUed_9naowmqiks1XYFeoA2fZ9Ff/view?usp=sharing" target='_blank' className='cv-btn'> Download CV </Link>
 </div>
 
 <div className="home-img">

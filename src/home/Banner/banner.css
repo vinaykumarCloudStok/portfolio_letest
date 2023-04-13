@@ -70,7 +70,6 @@
 /* section style  */
 .home{
     display: flex;
-   
     /* align-items: center; */
 }
 .home-img{
@@ -78,9 +77,9 @@
 }
 .border-img{
   background-color: var(--main-color);
-  width: 35rem;
-  height: 35rem;
-  margin: auto;
+  width: 32rem;
+  height: 32rem;
+  margin: 6rem auto;
   border-radius: 50%;
   
    

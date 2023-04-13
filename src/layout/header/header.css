@@ -8,14 +8,17 @@
    left: 0;
    z-index: 2;
    width: 100%;
-padding: 2rem 9%;
+   height: 6rem;
+padding: 4rem 9%;
 }
-
-.logo-header p{
+.logo-header img{
+    width: 14rem;
+}
+/* .logo-header p{
     font-size: 1.7rem;
     display: flex;
     align-items: center;
-}
+} */
 .header.colorChange{
     background-color: #000;
 }

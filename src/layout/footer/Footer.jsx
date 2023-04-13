@@ -27,9 +27,9 @@ const Footer = () => {
       <h2>Follow Me</h2>
       <p>Let us be social</p>
       <div className="social-media">
-      <Link to="#" > <BsFacebook className='icon'/> </Link>
-      <Link to="#" > <BsTwitter className='icon'/> </Link>
-      <Link to="#" > <BsLinkedin className='icon'/> </Link>
+      <Link to="https://twitter.com/VinayKu04755744?t=6k8mrlxUGDrdBa7ivH8TBA&s=08" target='_blank' > <BsFacebook className='icon'/> </Link>
+      <Link to="https://www.linkedin.com/in/vinay-kumar-4215561a2" target='_blank' > <BsTwitter className='icon'/> </Link>
+      <Link  to="https://instagram.com/vinay_cric18?igshid=ZDdkNTZiNTM=" target='_blank'> <BsLinkedin className='icon'/> </Link>
       <Link to="#"> <BsInstagram className='icon'/> </Link>
      </div>
       </div>

@@ -57,11 +57,14 @@ const PortFolio = () => {
   return (
  <Layout>
     <section>
-  <div className='center' id='loop'></div>
+      <div>
+        PortFolio
+      </div>
+  {/* <div className='center' id='loop'></div>
   <div className="center" id='bike-wrapper'>
     <div id='bike' className='centerBike'></div>
   </div>
-  <div className="glass"></div>
+  <div className="glass"></div> */}
    </section>
  </Layout>
   )
