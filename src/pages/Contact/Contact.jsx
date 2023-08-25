@@ -1,72 +1,120 @@
 import React from 'react'
 import Layout from '../../layout/Layout'
-import '../Contact/contact.css'
-import { Link } from 'react-router-dom';
-import '../../home/Banner/banner.css'
-import {BsFacebook,BsInstagram,BsLinkedin,BsTwitter} from 'react-icons/bs'
-import {BsTelephone} from 'react-icons/bs'
-import BannerScreen from '../../home/Banner/BannerScreen';
+import '../../pages/contact/contact.css'
+import { Link } from 'react-router-dom'
 const Contact = () => {
-    const data = ['1','2','3','4']
   return (
-    <Layout>
-        <section className='contact'>
-            <div className="contact-container">
-                {
-                    data.map((el,i)=>(
-                        <div className="contact-box" key={i}>
-                        <BsTelephone className='icon-1'/>
-                        <h2>Phone Number</h2>
-                        <p>234-9876-5400</p>
-                         <p>888-0123-4567 (Toll Free)</p>
-                      </div>
-                    ))
-                }
+  <Layout>
+    <div className="hero-container">
+        <h1 className="hero-heading">Contact</h1>
+    </div>
+  {/* // <!-- blog section  --> */}
+
+  <div className="shop-category-section">
+    <section className='section'>
+    <div className="contact-container">
+      <ul className="breadcrumb">
+        <li><Link to="/">Home</Link></li>
+        <li>Contact</li>
+      </ul>
+      <div className="contact-container-content">
+        <div className="contact-left">
+          <div className="contact-head">
+            <h1>SEND US AN EMAIL</h1>
+  
+          </div>
+          <div className="contact-input-container">
+            <div className="contact-input-field">
+              <label for="name">Your Name</label> <br/>
+              <input type="text" name="" id=""/>
             </div>
-            <div className="contact-form">
-                <div className="contact-body">
-                <form>
-                    <div className="contact-input-box">
-                        <label htmlFor="email">Email</label> <br />
-                        <input type="email" name="email" id="" />
-                    </div>
-                    <div className="contact-input-box">
-                        <label htmlFor="name">Name</label> <br />
-                        <input type="name" name="name" id="" /> <br />
-                    </div>
-                    <div className="contact-input-box">
-                        <label htmlFor="number">Mobile Number</label> <br />
-                        <input type="number" name="number" id="" />
-                    </div>
-                    <div className="contact-input-box">
-                        <label htmlFor="message">Message</label> <br />
-                        <textarea type="text" name="message" id="" />
-                    </div>
-                    <div className="contact-btn">
-                    <button type='submit' className='cv-btn'>Submit</button>
-                    </div>
-                </form>
-                </div>
-                <div className="contact-para">
-                    <h2>Get in touch</h2>
-                    <p className='para-one'>We can ensure reliability, low cost fares and most important, with safety and comfort in mind.</p>
-                    <p className='para-two'>Etiam sit amet convallis erat – class aptent taciti sociosqu ad litora torquent per conubia! Maecenas gravida lacus. Lorem etiam sit amet convallis erat.</p>
-                    <div className="social-media">
-      <Link to="#" > <BsFacebook className='icon'/> </Link>
-      <Link to="#" > <BsTwitter className='icon'/> </Link>
-      <Link to="#" > <BsLinkedin className='icon'/> </Link>
-      <Link to="#"> <BsInstagram className='icon'/> </Link>
-     </div>
-                </div>
+            <div className="contact-input-field">
+              <label for="name">Your Email</label> <br/>
+              <input type="email" name="" id=""/>
             </div>
-            <div className="box"></div>
-            {/* <div className="">
-          <input type="checkbox" name="" id="animation"/>
-          <label htmlFor="animation" style={{color:"#fff"}}></label>
-          <div className="match" role="img" aria-label='A drawing of a match burning'></div>
-            </div> */}
-        </section>
-    </Layout>
+          </div>
+          <div className="contact-input-container">
+            <div className="contact-input-field">
+              <label for="name">Phone Number</label> <br/>
+              <input type="text" name="" id=""/>
+            </div>
+            <div className="contact-input-field">
+              <label for="name">Company</label> <br/>
+              <input type="email" name="" id=""/>
+            </div>
+          </div>
+          <div className="contact-input-container">
+            <div className="contact-input-field-1">
+              <label for="name">Your Message</label> <br/>
+              <textarea name="" id="" rows="10"></textarea>
+            </div>
+          </div>
+          <div className="contact-btn-container">
+            <button>Ask A Questions</button>
+          </div>
+        </div>
+        <div className="contact-right">
+          <div className="contact-head-fre">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            <div className="border"></div>
+          </div>
+          <p className="contact-lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id impedit iure nostrum aliquam veniam explicabo.
+            Incidunt laborum impedit consequuntur, qui aperiam harum sequi facere quasi corrupti, dolorem error asperiores
+            ratione.
+          </p>
+          <div className="contact-head">
+            <h1>CONTACT US</h1>
+          </div>
+          <div className="contact-address-flex">
+            <div className="contact-img-flex">
+              <img src="../images/phone.png" alt=""/>
+              <div className="">
+                <p><span className="contact-bold">Phone:</span>+91 8826303060</p>
+                <p><span className="contact-bold"> Email:</span>Hello@belladoreluxury.com </p>
+              </div>
+            </div>
+            <div className="contact-img-flex">
+              <img src="../images/message.png" alt=""/>
+              <div>
+                <p>Support forum</p>
+                <p>for over 24h</p>
+              </div>
+            </div>
+          </div>
+          <div className="contact-address-flex">
+            <div className="contact-img-flex">
+              <img src="../images/location.png" alt=""/>
+              <div className="">
+                <p>
+                  Free standard shipping
+                </p>
+                <p>
+                  on all orders.
+                </p>
+              </div>
+            </div>
+            <div className="contact-img-flex">
+              <img src="../images/location2.png" alt=""/>
+              <div className="">
+                <p><span style={{fontWeight:"bold"}}>Address:</span> 445,Basement, Sector-23, Gurgaon, Haryana-122017
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="contact-footer">
+        <p>
+          Do you have questions about how we can help your company?
+          Send us an email and we’ll get in touch shortly.
+        </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  </div>
+
+  </Layout>
   )
 }
 

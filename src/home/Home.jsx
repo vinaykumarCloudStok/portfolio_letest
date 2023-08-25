@@ -1,7 +1,10 @@
 import React from 'react'
 import Layout from '../layout/Layout'
 import BannerScreen from './Banner/BannerScreen'
-import OurServices from './OurServices/OurServices'
+import HomeAbout from './homeAbout/HomeAbout'
+import OurProducts from './ourProducts/OurProducts'
+import InstaSlider from './instaSlider/InstaSlider'
+import HomeBlog from './homeblog/HomeBlog'
 
 
 const Home = () => {
@@ -9,7 +12,10 @@ const Home = () => {
     <>
 <Layout >
 <BannerScreen/>
-<OurServices/>
+<HomeAbout/>
+<OurProducts/>
+<InstaSlider/>
+<HomeBlog/>
 </Layout>
    
    

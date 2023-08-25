@@ -1,89 +1,214 @@
-.header{
+/* ================= header section style ============== */
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right:0;
+    background-color: #332d21;
+    /* height: 50px; */
+    /* height: 125px; */
+    /* background-color: red; */
+    z-index: 999;
+  }
+  
+  .navbar-container{
     display: flex;
+    width: 82%;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .logo-img{
+    height: 100%;
+    width: 20%;
+  }
+  .logo-img img{
+    width: 8rem;
+    margin: 0;
+   
+  }
+  #menu-icon{
+    display: none;
+    font-size: 1.8rem;
+    color: white !important;
+  }
+  
+  .nav-links{
+    list-style: none;
+    display: flex;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--bg-color);
-   position: fixed;
-   top:0;
-   left: 0;
-   z-index: 2;
-   width: 100%;
-   height: 6rem;
-padding: 4rem 9%;
-}
-.logo-header img{
-    width: 14rem;
-}
-/* .logo-header p{
-    font-size: 1.7rem;
-    display: flex;
-    align-items: center;
-} */
-.header.colorChange{
-    background-color: #000;
-}
-.nav-item{
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-.nav-item li .navlink{
- font-size: 1.7rem;
- margin: 0rem 1rem 0rem 1rem;
- color: var(--text-color);
-}
-.activeLink{
-    color: var(--main-color);
-    font-size: 1.7rem;
-    margin: 0rem 1rem 0rem 1rem;    
-}
-.nav-item li .navlink:hover{
-    color: var(--main-color);
-}
-.menu-btn{
-    display: none;
-}
-.menu-icon{
-    font-size: 2rem;
-    cursor: pointer;
-}
-@media (max-width:768px) {
-    .header{
-        flex-direction: row-reverse;
-    }
-    .nav-item{
-        position:fixed;
-        left: 120%;
-        display: block;
-        /* width: 50%; */
-        background-color: white;
-        box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
-    }
-    .menu-btn{
-        display: block;
-    }
-    .nav-item li{
-        margin-top: 1rem;
-    }
-    .active-menu{
-        position:absolute;
-        left: 0rem;
-        top:5rem;
-        display: flex;
-        transition: .4s all;
-        /* z-index: 0; */
-        display: block;
-        overflow-x: auto;
-        width: 100%;
-        background: rgb(5, 68, 104);
-    }
-    .navlink{
-   display: block;
-  text-align: center;
-    }
-  .activeLink{
-    display: block;
-   text-align: center;
-  
   }
-}
+  .nav-links li{
+    display: inline-block;
+  }
+  .nav-links li a{
+    text-decoration: none;
+    color: white;
+    margin: 0rem 1rem 0rem 1rem;
+    font-size: 1rem;
+    /* background-color: #00acee; */
+  }
+  .nav-links li a:hover{
+    color: #bf9020;
+    transition: .4s all linear;
+  }
+  li a.active{
+      color: #bf9020;
+  }
+  
+  
+  .book-now-btn{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-left: 2rem;
+  }
+  
+  /* tooltip / */
+  .tooltip {
+      position: relative;
+      display: inline-block;
+      display: flex;
+      align-items: center;
+  
+    }
+    .tooltip img{
+      width: 40px;
+      /* height: 40px; */
+      cursor: pointer;
+     /* background-color: white; */
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 100px;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      /* transition: .4s all ; */
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      margin-left: -50px;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+  /* dropdown button  */
+  .dropbtn {
+      color: white;
+      font-size: 1rem;
+      border: 1px solid #dbdbdd;
+      border-radius: 0;
+      display: flex;
+      gap: 1rem;
+     
+      align-items: center;
+      justify-content: space-between;
+      background-color: transparent;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color:white;
+      min-width: 160px;
+      color: black !important;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black !important;
+      padding: 12px 0 12px 0;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #dbdbdd;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+   
+
+    @media (max-width:1100px) {
+        .header {
+            /* width: 100%; */
+        }
+        .navbar-container{
+            width: 95%;
+        }
+    
+        .icon-color-menu {
+            font-size: 1.8rem;
+            color:white;
+        }
+    
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+    
+        .close-btn {
+            display: block;
+            margin-left: 10rem;
+            margin-top: 1rem;
+            cursor: pointer;
+           
+    
+        }
+        .dropbtn{
+            color: black;
+            border: 1px solid black;
+
+        }
+    
+        .nav-links {
+            position: absolute;
+            right: 0;
+            top: 0px;
+            /* background-color: var(--container-color); */
+            flex-direction: column;
+            width: 0px;
+            height: calc(100vh - 100px);
+            transition: all 0.3s ease-in;
+            z-index: 1000;
+            overflow: hidden;
+            background: var(--btn-color);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            /* border-radius: 10px; */
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding-bottom: 3rem;
+        }
+    
+        .nav-links li {
+            display: block;
+        }
+    
+        .nav-links li a {
+            margin: 0;
+            font-weight: bold;
+            display: block;
+            color: black;
+            margin-top: 1rem;
+            text-align: right;
+        }
+    
+        .active-nav-links {
+            width: 270px;
+            /* color:black; */
+        }
+    }

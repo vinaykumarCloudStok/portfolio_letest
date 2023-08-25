@@ -1,0 +1,258 @@
+.product-list-container{
+    display: flex;
+    justify-content: space-between;
+  padding: 3rem 0 3rem 0;
+}
+.product-list-left{
+width: 50%;
+gap: 1rem;
+display: flex;
+height: 500px;
+/* height: 300px; */
+/* align-items: center; */
+}
+.product-list-right{
+    color: black;
+    width: 48%;
+    height: 500px;
+}
+.product-list-right h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.product-list-img{
+    background-color: #dbdbdb;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.product-slider-container{
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    height: 500px;
+    justify-content: space-between;
+}
+.product-list-slider-img{
+    border: 1px solid #dbdbdb;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    display: flex;
+    background-color: #dbdbdb;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-list-slider-img img{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    
+}
+.product-list-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.rate-container{
+    display: flex;
+    align-items: center;
+}
+
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.price-content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 1rem 0;
+}
+.price-content p{
+    color: gray;
+    text-decoration: line-through;
+}
+.price-content span{
+    color: #deb217;
+    font-weight: bold;
+}
+.product-cart{
+    display: flex;
+    align-items: center;
+   padding: 3rem 0 3rem 0;
+}
+.product-cart-btn{
+    display: flex;
+    align-items: center;
+}
+.product-cart-btn input{
+    border: 1px solid #dbdbdb;
+    padding: .7rem 1rem .7rem 1rem;
+    width: 40%;
+    /* height: 1.5rem; */
+    text-align: center;
+    outline: none;
+    font-size: 1rem;
+}
+.less-cart{
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    /* padding: 0; */
+    /* height: 1.5rem; */
+    text-align: center;
+    padding: .7rem 1rem .7rem 1rem;
+    border-radius: 0;
+}
+.add-cart-btn{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.add-cart-btn button{
+    padding: 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 0;
+    padding: .7rem 1rem .7rem 1rem;
+}
+.add-cart-btn .buy{
+    background-color: black;
+    color: white;
+}
+.wishlist-btn{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+}
+
+
+.sku p{
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.sku p span{
+    color: gray;
+    font-weight: normal;
+}
+.share-icon{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.social-icon-1{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.product-description{
+    padding-bottom: 3rem;
+}
+.accordion .container-1 {
+    position: relative;
+    margin: 10px 10px;
+  }
+  
+  /* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+  
+  .accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .content{
+    color: black;
+  }
+  /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+  
+ 
+  
+  /* Adds a horizontal line between the contents */
+  
+  .accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+  }
+ 
+  
+  /* Changes from plus sign to negative sign once active */
+  @media (max-width:768px) {
+    .product-list-container{
+        flex-direction: column;
+    }
+    .product-list-left{
+        width: 100%;
+        flex-direction: column;
+    }
+.product-list-slider-img{
+    width: 100%;
+    margin-top: 1rem;
+  
+}
+.product-list-img{
+    width: 100%;
+    height: auto;
+}
+.product-list-img img{
+    width: 100%;
+    height: auto;
+}
+    .product-slider-container{
+        /* flex-direction: row; */
+        /* gap: 1rem; */
+    }
+    .product-list-right{
+        width: 100%;
+        margin-top: 15rem;
+        height: auto;
+    }
+    .product-cart{
+        flex-direction: column;
+    }
+    .product-cart-btn{
+        /* margin-top: 2rem; */
+        /* flex-direction: column; */
+        width: 100%;
+    }
+    .add-cart-btn{
+        margin-top: 1rem;
+    }
+    
+  }

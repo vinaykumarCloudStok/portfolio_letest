@@ -1,59 +1,52 @@
 import React from 'react'
-import Typed from "typed.js";
-import { useEffect, useRef } from "react";
-
-
-import { Link } from 'react-router-dom';
 import '../Banner/banner.css'
-import {BsFacebook,BsInstagram,BsLinkedin,BsTwitter} from 'react-icons/bs'
+import bannerBg from '../../assets/bg.png'
+import s1 from '../../assets/s1.png'
+import s2 from '../../assets/s2.png'
+import s3 from '../../assets/s3.png'
+import star from '../../assets/star.png'
+import { useNavigate } from 'react-router-dom'
 const BannerScreen = () => {
-  const el = useRef(null);
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Frontend Developer", "Youtuber", "Blogger", "More Strings"], // Strings to display
-      // Speed settings, try diffrent values untill you get good results
-      startDelay: 300,
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 100,
-      smartBackspace: true,
-      loop: true,
-      showCursor: true,
-      cursorChar: "!"
-    });
-
-    // Destropying
-    return () => {
-      typed.destroy();
-    };
-  }, []);
- 
+  const navigate = useNavigate()
   return (
-    <>
-    <section className='home'>
-{/* <Fade top big> */}
-<div className="home-content">
-  <h3>Hello, It's Me</h3>
-  <h1>Vinay Kumar</h1>
-  <h3>And I'm a  <span ref={el}></span></h3>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic sequi quo veniam eius,
-     officia atque <br /> beatae consequatur laboriosam repellendus recusandae
-     culpa doloremque voluptatibus, iure sapiente, <br /> labore nam esse tenetur vel.</p>
-     <div className="social-media">
-      <Link to="#" > <BsFacebook className='icon'/> </Link>
-      <Link to="https://twitter.com/VinayKu04755744?t=6k8mrlxUGDrdBa7ivH8TBA&s=08" target='_blank' > <BsTwitter className='icon'/> </Link>
-      <Link to="https://www.linkedin.com/in/vinay-kumar-4215561a2" target='_blank' > <BsLinkedin className='icon'/> </Link>
-      <Link to="https://instagram.com/vinay_cric18?igshid=ZDdkNTZiNTM=" target='_blank'> <BsInstagram className='icon'/> </Link>
-     </div>
-     <Link to="https://drive.google.com/file/d/1pKsOQUed_9naowmqiks1XYFeoA2fZ9Ff/view?usp=sharing" target='_blank' className='cv-btn'> Download CV </Link>
-</div>
-
-<div className="home-img">
-  <div className="border-img"></div>
-</div>
-{/* </Fade>s */}
-    </section>
-    </>
+  <div className="">
+      <div className="section">
+    <div className="home-content">
+      <div className="home-left-content">
+        <h1>Enhance Your Radiance With Exquisite Skincare Perfection <img src={star} alt=""
+            className="star-img"/></h1>
+        <div className="btn-container">
+        <button type="button" onClick={()=>navigate('/shop')} className="apt-btn">Shop Now</button>
+        </div>
+      </div>
+      <div className="home-right-content">
+        <img src={bannerBg} alt=""/>
+      </div>
+    </div>
+  </div>
+  <div className="element-box">
+    <div className="element-box-body">
+      <div className="element-box-img">
+        <div className="icon-heart-box">
+          <img src={s1} alt=""/>
+        </div>
+    
+      </div>
+      <div className="element-box-img">
+        <div className="icon-heart-box">
+          <img src={s3} alt=""/>
+        </div>
+      
+      </div>
+      <div className="element-box-img">
+        <div className="icon-heart-box">
+          <img src={s2} alt=""/>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+  </div>
   )
 }
 

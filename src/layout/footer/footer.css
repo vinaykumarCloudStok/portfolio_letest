@@ -1,65 +1,76 @@
-.footer-content{
-display: flex;
-
-/* align-items: center; */
-}
-.about-me{
-    width: 33%;
-}
-.copy-right{
-    margin-top: 1rem;
-}
-.news-letter{
-    width: 38%;
-display: flex;
-justify-content: center;
-}
-.input-container{
-    margin-top: 2rem;
+.footer{
+    background-color: var(--btn-color);
+    color: black;
+    padding: 2rem 0rem 2rem 0rem;
+  }
+  .footer-img img{
+    width: 200px;
+  }
+  .footer-container{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
-}
-.input-container input{
-    width: 100%;
-    padding: .81rem;
-    /* border-radius: 2px; */
-}
-.arrow-btn{
-    background-color:var(--main-color);
-    padding: .43rem;
-    cursor: pointer;
-}
-.icon-3{
-    font-size: 2.2rem;
-}
+  }
+  .social-icon{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+  .social-icon i{
+      font-size: 2rem;
+      margin-top: 2rem;
+  }
+  .social-icon a:nth-child(1){
+      color: 	#1877F2;
+  }
+  .social-icon a:nth-child(2){
+      color: #CD201F;
+  }
+  .social-icon a:nth-child(3){
+      color:#cd486b;
+  }
+  
+  .footer-card{
+    width: 70%;
+    margin-left: 2rem;
+  }
+  .footer-card h1{
+    color: black;
+    
+  }
+  .footer-menu{
+  display: flex;
+  width: 40%;
+  color: black;
+  justify-content: space-between;
+  
+  }
+  .footer-menu ul li{
+    list-style: none;
+    /* display: inline-block; */
+    margin-top: 1rem;
+    /* margin-bottom: auto; */
+  }
+  .footer-menu ul li a{
+  color: black;
+  text-decoration: none;
+  
+  }
 
-.social-link{
-    width: 28%;
-    display: flex;
-    justify-content: center;
-}
-.footer-content h2{
-    font-weight: normal;
-    font-size: 3.2rem;
-}
-.footer-content p{
-    font-size: 1.3rem;
-    font-weight: normal;
-}
-@media (max-width:768px) {
-    .footer-content{
- flex-direction: column;
-    }
-    .about-me{
-        width: 100%;
-    }
-    .news-letter{
-        width: 100%;
-     justify-content: start;
-    }
-    .social-link{
-        width: 100%;
-        justify-content: start;
-    }
-}
+  @media (max-width:768px) {
+    
+  .footer-container{
+    flex-direction: column;
+  }
+  .footer-card{
+    width: 100%;
+    margin: 0;
+    padding-bottom: 2rem;
+  }
+  .footer-card h1{
+font-size: 1rem;
+  }
+  .footer-menu{
+    width: 100%;
+  }
+  }
