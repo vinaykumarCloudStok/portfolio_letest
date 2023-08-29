@@ -16,7 +16,7 @@
 :root {
   --header-height:4rem;
   /* color  */
-
+  --main-color: rgb(228, 145, 37);
   --btn-color:#ecd8bf;
   --primary: #ec994b;
   --white: #ffffff;
@@ -161,5 +161,15 @@ button{
     .breadcrumb li{
       display: block;
       flex-direction: column;
+    }
+  }
+  @media (min-width:769px) and (max-width:1024px) {
+    .section{
+      width: 95%;
+    }
+  }
+  @media (min-width:1200px) and (max-width:1400px) {
+    .section{
+      width: 90%;
     }
   }

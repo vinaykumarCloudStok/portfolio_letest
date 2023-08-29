@@ -17,6 +17,9 @@
 .contact-right{
     width: 49%;
 }
+.contact-right p{
+    font-weight: 550;
+}
 .contact-input-container{
     display: flex;
     justify-content: space-between;

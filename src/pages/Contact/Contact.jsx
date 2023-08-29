@@ -70,8 +70,8 @@ const Contact = () => {
             <div className="contact-img-flex">
               <img src="../images/phone.png" alt=""/>
               <div className="">
-                <p><span className="contact-bold">Phone:</span>+91 8826303060</p>
-                <p><span className="contact-bold"> Email:</span>Hello@belladoreluxury.com </p>
+                <p><span className="contact-bold">Phone : </span>+91 8826303060</p>
+                <p><span className="contact-bold"> Email : </span>Hello@belladoreluxury.com </p>
               </div>
             </div>
             <div className="contact-img-flex">
@@ -97,7 +97,7 @@ const Contact = () => {
             <div className="contact-img-flex">
               <img src="../images/location2.png" alt=""/>
               <div className="">
-                <p><span style={{fontWeight:"bold"}}>Address:</span> 445,Basement, Sector-23, Gurgaon, Haryana-122017
+                <p><span style={{fontWeight:"bold"}}>Address : </span> 445,Basement, Sector-23, Gurgaon, Haryana-122017
                 </p>
               </div>
             </div>

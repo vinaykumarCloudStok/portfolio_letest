@@ -56,7 +56,9 @@ const ProductOne = () => {
                   <div class="price-content">
                       <p>Rs.1500.00/-</p> <span>Rs.1199.00/-</span>
                   </div>
-                  <p>This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind</p>
+                  <p>
+                  Vitamin C serums have the potential to improve skin's appearance by preventing wrinkling and reducing the appearance of hyperpigmented areas.
+                  </p>
                   <div class="product-cart">
                       <div class="product-cart-btn">
                           <button class="less-cart">-</button>
@@ -94,23 +96,23 @@ const ProductOne = () => {
                     <div class="container-1">
                       <div class="label">Description</div>
                       <div class="content">
-                          This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind  
+                      Vitamin C serums have the potential to improve skin's appearance by preventing wrinkling and reducing the appearance of hyperpigmented areas.
                       </div>
                     </div>
                     <hr/>
                     <div class="container-1">
                       <div class="label">How To Use</div>
                       <div class="content">
-                          Take generous quantity and 
-apply all over body. 
-Massage gently in circular 
-motion until absorbed
+                        
+Tap your skin gently for 30-60 seconds until the serum is absorbed. After you’ve rubbed the serum onto your skin, place your fingers on your cheek and press your skin in small, circular motions
                 </div>
                     </div>
                     <hr/>
                     <div class="container-1">
                       <div class="label">Ingredients</div>
-                      <div class="content"> Glycerol/Dlycerin, Aloe barbadensis,Olea europaea, Theobroma, Cetearyl alcohol, Stearic acid, Glyceryl mono stearate, Perfum, Tocopheryl acetate, Potassium Sorbate, Propylen Glycol, Vanilla Planifolia, perfume</div>
+                      <div class="content">
+                      Aqua,2-Bromo-2-Nitropropane-1 ( bronopol),ALLANTOIN,Disodium EDTA,Sodium Benzoate,Sodium Ascorbyl Phosphate,Curcuma Longa Root Extract,Morus Alba Root,Aloe Barbadensis Leaf Extract,Glycerol/Dlycerin,Kojic Acid,Hydroxyethyl Cellulose,Citric acid,Perfume
+                      </div>
                     </div>
                     <hr/>
                    

@@ -1,18 +1,32 @@
 import React from 'react'
 import Layout from '../../layout/Layout'
 import { Link, useNavigate } from 'react-router-dom'
-
+import one from '../../assets/vcb.JPG'
 import two from '../../assets/bcb.JPG'
-
-const BodyProduct = () => {
+import three from '../../assets/hyc.JPG'
+const AllProduct = () => {
     const navigate = useNavigate()
     const productData = [
+        {
+            img:one,
+            head:"Vitamin C serum",
+            para:"Vitamin C serums have the potential to improve skin's appearance by preventing wrinkling and reducing the appearance of hyperpigmented areas.",
+            price:"Rs. 1199/-",
+            route:"/product/listone"
+        },
         {
             img:two,
             head:"Vanilla body lotion",
             para:"This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind",
             price:"Rs. 1099/-",
             route:"/product/listtwo"
+        },
+        {
+            img:three,
+            head:"Hyaluronic Gel cream",
+            para:"A Hydrating hyaluronic gel face cream infuse with watermelon extract help with retaining moisture.its anti- aging properties,leaves the face plumps and radiant for hours.",
+            price:"Rs. 999/-",
+            route:"/product/listthree"
         },
     ]
   return (
@@ -59,4 +73,4 @@ const BodyProduct = () => {
   )
 }
 
-export default BodyProduct
+export default AllProduct

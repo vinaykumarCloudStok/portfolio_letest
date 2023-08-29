@@ -13,8 +13,10 @@ import ProductOne from "./pages/shop/ProductOne";
 import BodyProduct from "./pages/shop/BodyProduct";
 import WishList from "./pages/shop/WishList";
 import BlogPage from "./pages/blog/BlogPage";
-import ScrollToTop from "./compoent/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 import AddToCart from "./pages/cart/AddToCart";
+import AllProduct from "./pages/shop/AllProduct";
+import PageNotFound from "./components/PageNotFound";
 
 
 
@@ -38,6 +40,8 @@ function App() {
       <Route exact path="/bodyProduct" element={<BodyProduct/>} />
       <Route exact path="/wishlist" element={<WishList/>} />
       <Route exact path="/blogDescription" element={<BlogPage/>} />
+      <Route exact path="/allProduct" element={<AllProduct/>} />
+      <Route path="*" element={<PageNotFound/>}/>
     </Routes>
        </ScrollToTop>
   

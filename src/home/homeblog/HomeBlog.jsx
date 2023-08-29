@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../homeblog/homeblog.css'
 import Slider from "react-slick";
 import blog1 from '../../assets/vcb.JPG'
@@ -9,33 +9,33 @@ const HomeBlog = () => {
     {
       img: blog1,
       heade: "Vitamin C Serum",
-      para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
+      para: "Vitamin C is a powerful antioxidant that works to stimulate collagen production in the skin. It also fights fine lines, brightens complexion, and helps to reduce hyper pigmentation."
     },
     {
       img: blog1,
-      heade: "Vitamin C Serum",
-      para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
+      heade: "Hyaluronic Gel cream",
+      para: "Hydrating hyaluronic gel face cream infused with watermelon extract helps with retaining moisture and protecting skin barrier. Its anti- ageing properties leaves the face plump and radiant for hours."
     },
     {
       img: blog1,
-      heade: "Vitamin C Serum",
-      para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
+      heade: "Vanilla body lotion",
+      para: "This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind"
     },
-    {
-      img: blog1,
-      heade: "Vitamin C Serum",
-      para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKL"
-    },
-    {
-      img: blog1,
-      heade: "Vitamin C Serum",
-      para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
-    },
-    {
-      img: blog1,
-      heade: "Vitamin C Serum",
-      para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
-    },
+    // {
+    //   img: blog1,
+    //   heade: "Vitamin C Serum",
+    //   para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKL"
+    // },
+    // {
+    //   img: blog1,
+    //   heade: "Vitamin C Serum",
+    //   para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
+    // },
+    // {
+    //   img: blog1,
+    //   heade: "Vitamin C Serum",
+    //   para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
+    // },
   ]
   const settings = {
     className: "center",
@@ -106,11 +106,8 @@ const HomeBlog = () => {
                   </p>
                  
                   <div className="user">
-                    <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                    <div className="user-info">
-                      <h5>July Dec</h5>
-                      <small>2h ago</small>
-                    </div>
+                   <Link to="/blogDescription">Continue Reading...</Link>
+                   
                   </div>
                 </div>
               </div>

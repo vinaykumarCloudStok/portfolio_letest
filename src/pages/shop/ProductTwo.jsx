@@ -37,7 +37,7 @@ const ProductTwo = () => {
             </div>
             <div class="product-list-right">
                 <h1>Vanilla & Cinnamon  body lotion(100ml)</h1>
-                <div class="rate-container">
+                {/* <div class="rate-container">
                     <div class="rate">
 
                         <input type="radio" id="star5" name="rate" value="5" />
@@ -52,11 +52,13 @@ const ProductTwo = () => {
                         <label for="star1" title="text">1 star</label>
                     </div>
                     <p>(1 Customer Review)</p>
-                </div>
+                </div> */}
                 <div class="price-content">
                     <p>Rs.1500.00/-</p> <span>Rs.1199.00/-</span>
                 </div>
-                <p>This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind    </p>
+                <p>
+                This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind                                                                                                                                
+                        </p>
                 <div class="product-cart">
                     <div class="product-cart-btn">
                         <button class="less-cart">-</button>
@@ -101,14 +103,18 @@ const ProductTwo = () => {
                 <div class="container-1">
                   <div class="label">How To Use</div>
                   <div class="content">
-                      
-Tap your skin gently for 30-60 seconds until the serum is absorbed. After you’ve rubbed the serum onto your skin, place your fingers on your cheek and press your skin in small, circular motions
+                  Take generous quantity and 
+apply all over body. 
+Massage gently in circular 
+motion until absorbed
             </div>
                 </div>
                 <hr/>
                 <div class="container-1">
                   <div class="label">Ingredients</div>
-                  <div class="content">Aqua,2-Bromo-2-Nitropropane-1 ( bronopol),ALLANTOIN,Disodium EDTA,Sodium Benzoate,Sodium Ascorbyl Phosphate,Curcuma Longa Root Extract,Morus Alba Root,Aloe Barbadensis Leaf Extract,Glycerol/Dlycerin,Kojic Acid,Hydroxyethyl Cellulose,Citric acid,Perfume</div>
+                  <div class="content">
+                  Glycerol/Dlycerin, Aloe barbadensis,Olea europaea, Theobroma, Cetearyl alcohol, Stearic acid, Glyceryl mono stearate, Perfum, Tocopheryl acetate, Potassium Sorbate, Propylen Glycol, Vanilla Planifolia, perfume
+                    </div>
                 </div>
                 <hr/>
                

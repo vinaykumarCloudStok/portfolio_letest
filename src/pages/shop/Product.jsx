@@ -10,7 +10,7 @@ const Product = () => {
         {
             img:one,
             head:"Vitamin C serum",
-            para:"Pour the mixture into Link non-stick container and then freeze overnight. Take treating your dog Link step",
+            para:"Vitamin C serums have the potential to improve skin's appearance by preventing wrinkling and reducing the appearance of hyperpigmented areas.",
             price:"Rs. 1199/-",
             route:"/product/listone"
         },
@@ -18,7 +18,7 @@ const Product = () => {
         {
             img:three,
             head:"Hyaluronic Gel cream",
-            para:"Pour the mixture into Link non-stick container and then freeze overnight. Take treating your dog Link step",
+            para:"A Hydrating hyaluronic gel face cream infuse with watermelon extract help with retaining moisture.its anti- aging properties,leaves the face plumps and radiant for hours.",
             price:"Rs. 999/-",
             route:"/product/listthree"
         },

@@ -3,7 +3,7 @@ import '../ourProducts/ourproducts.css'
 import productImg from '../../assets/vcb.JPG'
 import productImg1 from '../../assets/hyc.JPG'
 import productImg2 from '../../assets/bcb.JPG'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const OurProducts = () => {
   const navigate = useNavigate()
   const productData = [
@@ -61,7 +61,7 @@ const OurProducts = () => {
             </div>
             <div className="service-btn-container">
 
-              <button onClick={() => navigate('/product')} className="service-btn">All Products <i className="fa-solid fa-arrow-right"></i></button>
+              <button onClick={() => navigate('/allProduct')} className="service-btn">All Products <i className="fa-solid fa-arrow-right"></i></button>
 
             </div>
 

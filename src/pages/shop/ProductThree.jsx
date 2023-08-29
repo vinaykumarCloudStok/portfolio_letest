@@ -36,7 +36,7 @@ const ProductThree = () => {
           </div>
           <div className="product-list-right">
               <h1>Hyaluronic Gel cream(50g)</h1>
-              <div className="rate-container">
+              {/* <div className="rate-container">
                   <div className="rate">
 
                       <input type="radio" id="star5" name="rate" value="5" />
@@ -51,11 +51,13 @@ const ProductThree = () => {
                       <label for="star1" title="text">1 star</label>
                   </div>
                   <p>(1 Customer Review)</p>
-              </div>
+              </div> */}
               <div className="price-content">
                   <p>Rs.1500.00/-</p> <span>Rs.999.00/-</span>
               </div>
-              <p>A Hydrating hyaluronic gel face cream infuse with watermelon extract help with retaining moisture.its anti- aging properties,leaves the face plumps and radiant for hours.</p>
+              <p>
+              A Hydrating hyaluronic gel face cream infuse with watermelon extract help with retaining moisture.its anti- aging properties,leaves the face plumps and radiant for hours.
+                </p>
               <div className="product-cart">
                   <div className="product-cart-btn">
                       <button className="less-cart">-</button>
@@ -92,23 +94,22 @@ const ProductThree = () => {
                 <div className="container-1">
                   <div className="label">Description</div>
                   <div className="content">
-                      After washing your face, use Link small quantity and massage evenly on your face and neck
+                  A Hydrating hyaluronic gel face cream infuse with watermelon extract help with retaining moisture.its anti- aging properties,leaves the face plumps and radiant for hours.
                   </div>
                 </div>
                 <hr/>
                 <div className="container-1">
                   <div className="label">How To Use</div>
                   <div className="content">
-                      Take generous quantity and 
-apply all over body. 
-Massage gently in circular 
-motion until absorbed
+                  After washing your face, use a small quantity and massage evenly on your face and neck
             </div>
                 </div>
                 <hr/>
                 <div className="container-1">
                   <div className="label">Ingredients</div>
-                  <div className="content"> Aloe Barbadensis Leaf Extract ,Helianthus Annuus (Sunflower) Seed Oil,Propylene Glycol Dicaprate,Dimethicone,Glycerin,Prunus Amygdalus Dulcis (Sweet Almond) Oil,Sodium Benzoate,ALLANTOIN,Tocopheryl Acetate.Morus Alba Root,Citrullus Lanatus,Prunus Armeniaca (Apricot) Kernel Oil ,Disodium EDTA
+                  <div className="content"> 
+                  Aloe Barbadensis Leaf Extract ,Helianthus Annuus (Sunflower) Seed Oil,Propylene Glycol Dicaprate,Dimethicone,Glycerin,Prunus Amygdalus Dulcis (Sweet Almond) Oil,Sodium Benzoate,ALLANTOIN,Tocopheryl Acetate.Morus Alba Root,Citrullus Lanatus,Prunus Armeniaca (Apricot) Kernel Oil ,Disodium EDTA
+
                   </div>
                 </div>
                 <hr/>

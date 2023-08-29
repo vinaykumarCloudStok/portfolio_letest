@@ -14,7 +14,7 @@
 }
 
 .swiper_container {
-  height: 52rem;
+  height: 35rem;
   padding: 2rem 0;
   position: relative;
 }
@@ -40,8 +40,8 @@
 }
 
 .swiper-slide img {
-  width: 37rem;
-  height: 42rem;
+  width: 29rem;
+  height: 32rem;
   border-radius: 2rem;
   object-fit: cover;
 }
@@ -79,6 +79,7 @@
   .heading{
     font-size: 2rem;
   }
+  
 }
 
 @media (max-width: 990px) {

@@ -1,13 +1,17 @@
 /* home section style  */
-
+.home-main-container{
+  position: relative;
+}
 .home-content{
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-between;
     color: white;
+    
     }
     .home-left-content{
       margin-top: 3rem;
+      /* position: relative; */
     }
     .home-left-content p{
       padding: 1rem 0rem 1rem 0rem;
@@ -17,6 +21,7 @@
       color: white;
       /* margin: 1rem 0rem 1rem 0rem; */
     }
+  
     .home-right-content img{
       position: relative;
       z-index: 2;
@@ -73,10 +78,13 @@
       background-color:#bf9020;
       width: 71%;
       position: absolute;
-      top: 96.5%;
+      top: 82.9%;
       height: 115px;
       padding-top: .7rem;
       z-index: 1;
+    }
+    .mid-img{
+      width: 80px !important;
     }
     .element-box-body{
       display: flex;

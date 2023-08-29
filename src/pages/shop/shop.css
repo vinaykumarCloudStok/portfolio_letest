@@ -234,7 +234,7 @@ color: #000;
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 56px;
+    bottom: 40px;
     margin: 0;
     padding: 0;
     color: #666C74;
@@ -290,11 +290,20 @@ color: #000;
     min-width: 100%;
     /* width: 100%; */
   }
+  .card{
+    width: 100%;
+  }
+  .card__thumb{
+    width: 100%;
+    height: auto;
+  }
+  .card__thumb img{
+    width: 100%;
+    height: auto;
+  }
   .product-container{
     flex-direction: column;
     gap: 2rem;
 }
-.card{
-    /* width: 100% !important; */
-}
+
 }

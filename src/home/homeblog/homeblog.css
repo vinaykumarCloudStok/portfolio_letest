@@ -53,7 +53,7 @@
 }
 .tag-teal {
   background-color:var(--btn-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .tag-purple {
   background-color: #5e76bf;
@@ -65,12 +65,19 @@
 .blog-card-body p {
  font-size: 1rem;
  width: 90%;
+ padding-bottom: 1rem;
 }
 .user {
   display: flex;
   margin-top: auto;
 }
-
+.user a{
+  color: #bf9020;
+  font-weight: bold;
+}
+.user a:hover{
+  text-decoration: underline;
+}
 .user img {
   border-radius: 50%;
   width: 40px;

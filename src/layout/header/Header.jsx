@@ -6,9 +6,11 @@ import login from '../../assets/user (1).png'
 import cart from '../../assets/shopping-cart (1).png'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import '../header/drop.css'
 const Header = () => {
     const navigate = useNavigate()
     const [toggle, setToggle] = useState(false)
+    const [searchOpen,setSearchOpen] = useState(false)
   return (
     <nav class="navbar">
     <div class="navbar-container">
@@ -22,19 +24,50 @@ const Header = () => {
       <div className="close-btn">
                         <AiOutlineClose className='icon-color-menu' style={{color:"black"}} onClick={() => setToggle(false)} />
                     </div>
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn">Categories <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-              <Link to="#">SKIN</Link>
-              <Link to="#">MOISTURIZERS</Link>
-              <Link to="#">Serums(Face Moisturizer & Cream)</Link>
-              <Link to="#">BATH & BODY</Link>
-              <Link to="#">BODY CARE</Link>
-              <Link to="#">Lotion</Link>
-            </div>
-          </div>
-        </li>
+                    <li>
+                   <p className='new-menu' to="#">CATEGORIES<i class="fas fa-caret-down"></i></p>
+                    <ul class="sub-menu">
+                        <li>
+                            <Link to="#">SKIN<i class="fas fa-caret-down"></i></Link>
+                            <ul class="sub-menu">
+                                <li>
+                                    <Link to="#">MOISTURIZERS
+                                        <i class="fas fa-caret-down"></i>
+                                    </Link>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <Link to="/product/listone">Serums</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/product/listthree">Face Moisturizer & Cream</Link>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                   
+                        <li>
+                          <Link to="#">BATH & BODY
+                              <i class="fas fa-caret-down"></i></Link>
+                          <ul class="sub-menu">
+                          
+                              <li>
+                                  <Link to="#">BODY CARE
+                                      <i class="fas fa-caret-down"></i>
+                                  </Link>
+                                  <ul class="sub-menu">
+                                      <li>
+                                          <Link to="/product/listtwo">Lotion</Link>
+                                      </li>
+                                    
+                                  </ul>
+                              </li>
+                          </ul>
+                      </li>
+                    </ul>
+              
+                </li>
         <li><NavLink to="/"> Home </NavLink></li>
         <li><NavLink to="/shop"> Shop </NavLink></li>
         <li><NavLink to="/about"> About Us </NavLink></li>
@@ -42,7 +75,7 @@ const Header = () => {
         <li><NavLink to="/contact"> Contact </NavLink></li>
         <li>
           <div class="book-now-btn">
-            <div class="tooltip" id="search-id">
+            <div class="tooltip" id="search-id" onClick={()=>setSearchOpen(!searchOpen)}>
               <img src={search} alt=""/>
               <span class="tooltiptext">Search</span>
             </div>
@@ -58,9 +91,13 @@ const Header = () => {
           </div>
         </li>
       </ul>
+      {
+        searchOpen&&(
+            <div className="search-btn"></div>
+        )
+      }
 
-      <div id="menu-icon" class="fa-solid fa-bars">
-      </div>
+
     </div>
   </nav>
   )
