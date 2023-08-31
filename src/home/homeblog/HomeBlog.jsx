@@ -8,44 +8,75 @@ const HomeBlog = () => {
   const blogData = [
     {
       img: blog1,
-      heade: "Vitamin C Serum",
-      para: "Vitamin C is a powerful antioxidant that works to stimulate collagen production in the skin. It also fights fine lines, brightens complexion, and helps to reduce hyper pigmentation."
+      para: "Understanding Face Serums: What They Are and How to Use Them for Optimal Skin Care",
+      routeBlog:"/blogOne",
     },
     {
       img: blog1,
-      heade: "Hyaluronic Gel cream",
-      para: "Hydrating hyaluronic gel face cream infused with watermelon extract helps with retaining moisture and protecting skin barrier. Its anti- ageing properties leaves the face plump and radiant for hours."
+      para:"Winter Sun Protection: Choosing the Right Sunscreen for Cold Weather",
+      routeBlog:"/blogTwo",
     },
     {
       img: blog1,
-      heade: "Vanilla body lotion",
-      para: "This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind"
+      para: "Elevating Your Grooming Game: Tips and Tricks for Men's Skincare and Grooming",
+      routeBlog:"/blogThree",
     },
-    // {
-    //   img: blog1,
-    //   heade: "Vitamin C Serum",
-    //   para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKL"
-    // },
-    // {
-    //   img: blog1,
-    //   heade: "Vitamin C Serum",
-    //   para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
-    // },
-    // {
-    //   img: blog1,
-    //   heade: "Vitamin C Serum",
-    //   para: "lorempoewrihusbgkflmadjiohfbjnkdfdksm dklnfdkdfsldsnflBJKFSNKLJ"
-    // },
+    {
+      img: blog1,
+      para: "The Daily Dose: Understanding the Benefits and Risks of Using Face Serum Every Day",
+      routeBlog:"/blogFour",
+    },
+    {
+      img: blog1,
+      para: "The Moisturizer Maze: A Guide to Choosing the Right Moisturizer for Your Skin Type",
+      routeBlog:"/blogFive",
+    },
+    {
+      img: blog1,
+      para: "Face Wash 101: A Guide to Choosing the Right Cleanser for Your Skin Type",
+      routeBlog:"/blogSix",
+    },
+    {
+      img: blog1,
+      para: "Achieving Radiant Skin: Tips for a Hyper Glowy Complexion this Winter",
+      routeBlog:"/blogSeven",
+    },
+    {
+      img: blog1,
+      para: "The Essential Five: A Guide to Basic Skincare",
+      routeBlog:"/blog8",
+    },
+    {
+      img: blog1,
+      para: "The Skin-Boosting Benefits of Vitamin C: Why it's a Must-Have in Your Skincare Routine",
+      routeBlog:"/blog9",
+    },
+    {
+      img: blog1,
+      para: "Creating the Perfect Skincare Routine: A Guide to Achieving Glowing, Healthy Skin",
+      routeBlog:"/blog10",
+    },
+    {
+      img: blog1,
+      para: "Proper Application: A Guide to Using Face Serum for Optimal Results",
+      routeBlog:"/blog11",
+    },
+    {
+      img: blog1,
+      para: "Determining Your Skin Type: A Guide to Understanding Your Complexion Needs",
+      routeBlog:"/blog12",
+    },
   ]
   const settings = {
-    className: "center",
-    centerMode: true,
+    // centerMode: true,
     dots: true,
     infinite: true,
-    centerPadding: "5px",
+
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    focusOnSelect: true,
+    // rtl: true,
     autoplay: true,
       speed: 2000,
       cssEase: "linear",
@@ -95,12 +126,12 @@ const HomeBlog = () => {
         <Slider {...settings}>
           {
             blogData.map((el, i) => (
-              <div className="blog-card" key={i} onClick={()=>navigate('/blogDescription')}>
+              <div className="blog-card" key={i} onClick={()=>navigate(el.routeBlog)}>
                 <div className="blog-card-header">
                   <img src={el.img} alt="rover" />
                 </div>
                 <div className="blog-card-body">
-                  <span className="tag tag-teal">{el.heade}</span>
+                  {/* <span className="tag tag-teal">{el.heade}</span> */}
                   <p>
                     {el.para}
                   </p>

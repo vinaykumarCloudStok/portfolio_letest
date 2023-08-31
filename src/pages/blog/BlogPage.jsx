@@ -379,33 +379,6 @@ const BlogPage = () => {
                 </div>
 
               </div>
-              {/* <div className="blog-desc-right">
-                <h2>Recent Post</h2>
-                {
-                    blogdescData.map((el,i)=>(
-                        <div className="blog-desc-right-content">
-                        <img src={blogimg} alt="" />
-                        <div className="blog-right-footer">
-                        <h4>A Compain for Extra Solution</h4>
-                        <p>July 23, 2016 1 Comment</p>
-                        </div>
-                    </div>
-                    ))
-                }
-              <div className="blog-insta-container">
-                <h2>OUR INSTAGRAM</h2>
-               <div className="blog-insta">
-               {
-                    imgData.map((el,i)=>(
-                       <div className="blog-insta-img">
-                         <img src={blogimg} alt="" />
-                       </div>
-                    ))
-                }
-               </div>
-               
-              </div>
-            </div> */}
             </div>
           </div>
         </section>

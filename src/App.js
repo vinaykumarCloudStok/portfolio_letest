@@ -17,6 +17,18 @@ import ScrollToTop from "./components/ScrollToTop";
 import AddToCart from "./pages/cart/AddToCart";
 import AllProduct from "./pages/shop/AllProduct";
 import PageNotFound from "./components/PageNotFound";
+import BlogOne from "./pages/blog/BlogOne";
+import BlogTwo from "./pages/blog/BlogTwo";
+import BlogThree from "./pages/blog/BlogThree";
+import BlogFour from "./pages/blog/BlogFour";
+import BlogFive from "./pages/blog/BlogFive";
+import BlogSix from "./pages/blog/BlogSix";
+import BlogSeven from "./pages/blog/BlogSeven";
+import Blog8 from "./pages/blog/Blog8";
+import Blog9 from "./pages/blog/Blog9";
+import Blog10 from "./pages/blog/Blog10";
+import Blog11 from "./pages/blog/Blog11";
+import Blog12 from "./pages/blog/Blog12";
 
 
 
@@ -40,6 +52,19 @@ function App() {
       <Route exact path="/bodyProduct" element={<BodyProduct/>} />
       <Route exact path="/wishlist" element={<WishList/>} />
       <Route exact path="/blogDescription" element={<BlogPage/>} />
+      <Route exact path="/blogOne" element={<BlogOne/>} />
+      <Route exact path="/blogTwo" element={<BlogTwo/>} />
+      <Route exact path="/blogThree" element={<BlogThree/>} />
+      <Route exact path="/blogFour" element={<BlogFour/>} />
+      <Route exact path="/blogFive" element={<BlogFive/>} />
+      <Route exact path="/blogSix" element={<BlogSix/>} />
+      <Route exact path="/blogSeven" element={<BlogSeven/>} />
+      <Route exact path="/blog8" element={<Blog8/>} />
+      <Route exact path="/blog9" element={<Blog9/>} />
+      <Route exact path="/blog10" element={<Blog10/>} />
+      <Route exact path="/blog11" element={<Blog11/>} />
+      <Route exact path="/blog12" element={<Blog12/>} />
+     
       <Route exact path="/allProduct" element={<AllProduct/>} />
       <Route path="*" element={<PageNotFound/>}/>
     </Routes>
