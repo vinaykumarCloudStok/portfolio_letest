@@ -111,6 +111,7 @@
       .home-right-content img{
         position: static;
         height: auto;
+        display: block;
       }
       .element-box{
         position: static;

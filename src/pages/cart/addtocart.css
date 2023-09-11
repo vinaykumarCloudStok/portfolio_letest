@@ -5,7 +5,7 @@
 .cart-left-head{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     /* align-items: center; */
 }
 .cart-left-content{
@@ -14,12 +14,11 @@
     padding: 1rem;
     gap: 1rem;
     justify-content: space-between;
-    border-top: 1px solid #bf9020;
-    /* border-bottom: 1px solid #bf9020; */
-}
-.cart-left-content:nth-child(4){
+    /* border-top: 1px solid #bf9020; */
     border-bottom: 1px solid #bf9020;
+
 }
+
 .cart-left-content img{
     width: 100px;
 }
@@ -33,23 +32,30 @@
     /* align-items: center; */
 }
 .backshop{
-    margin-top: 3rem;
-    padding: 1rem;
-}
-.backshop button{
-    background-color: black;
+    margin: 3rem auto;
+    background-color: black !important;
     color: white;
+  
 }
+
 .cart-right{
     background-color: #dbdbdb;
     color: black;
-    padding: 1rem;
+    /* padding: 1rem 0 1rem 0; */
     width: 40%;
+}
+.img-cart{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 .product-cart{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50%;
+    
    /* padding: 3rem 0 3rem 0; */
 }
 .product-cart-btn{
@@ -133,15 +139,25 @@ font-weight: bold;
     margin-top: 2.1rem;
     padding-top: 1rem;
 }
-.checkout{
-    margin-top: 3rem;
+
+.shopping-new p{
+    font-weight: bold;
+    
 }
-.checkout button{
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    font-size: 1rem;
+.shopping-new-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.shopping-new-btn button{
+background-color: #bf9020;
+color: white;
+}
+.cart-new-remove{
+  display: flex;
+  align-items: center;
+  width: 20%;
 }
 
 @media (max-width:768px) {
@@ -151,10 +167,129 @@ font-weight: bold;
     .cart-left{
         width: 100%;
     }
+    .shopping-new-btn{
+      flex-direction: column;
+      gap: 1rem;
+    }
     .cart-left-content{
         flex-direction: column;
     }
     .cart-right{
         width: 100%;
     }
+    .cart-new-remove{
+      width: 100%;
+      justify-content: space-between;
+    }
+    .img-cart{
+      width: 100%;
+    }
+    .product-cart{
+      width: 100%;
+    }
 }
+
+.empty-cart{
+  display: flex;
+  color: black;
+  justify-content: center;
+   background-color: #dbdbdb;
+   padding: 3rem;
+   
+}
+
+.empty-cart button{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ********************* */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container-check {
+    background-color: #f2f2f2;
+    padding: 15px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+ .col-50 input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #bf9020;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }

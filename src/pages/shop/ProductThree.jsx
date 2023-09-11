@@ -2,8 +2,22 @@ import React from 'react'
 import '../shop/productList.css'
 import Layout from '../../layout/Layout'
 import hyc from '../../assets/hyc.JPG'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { BsChevronDown } from 'react-icons/bs'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/shop-context'
 const ProductThree = () => {
+  const navigate = useNavigate()
+    const [threeAcc,setThreeAcc] = useState(false)
+    const [threeAcc1,setThreeAcc1] = useState(false)
+    const [threeAcc2,setThreeAcc2] = useState(false)
+    const {state} = useLocation()
+    const routerData = state?.newData
+    console.log(routerData)
+    const { addToCart, cartItems } = useContext(ShopContext);
+
+    const cartItemCount = cartItems[routerData.id];
   return (
     <Layout>
     <div className="hero-container">
@@ -21,22 +35,22 @@ const ProductThree = () => {
           <div className="product-list-left">
               <div className="product-slider-container">
                   <div className="product-list-slider-img">
-                      <img src={hyc} alt=""/>
+                  <img src={routerData.productImage} alt=""/>
                   </div>
                   <div className="product-list-slider-img">
-                  <img src={hyc} alt=""/>
+                  <img src={routerData.productImage} alt=""/>
                   </div>
                   <div className="product-list-slider-img">
-                  <img src={hyc} alt=""/>
+                  <img src={routerData.productImage} alt=""/>
                   </div>
               </div>
               <div className="product-list-img">
-              <img src={hyc} alt=""/>
+              <img src={routerData.productImage} alt=""/>
               </div>
           </div>
           <div className="product-list-right">
-              <h1>Hyaluronic Gel cream(50g)</h1>
-              {/* <div className="rate-container">
+              <h1>{routerData.productName}(50g)</h1>
+              <div className="rate-container">
                   <div className="rate">
 
                       <input type="radio" id="star5" name="rate" value="5" />
@@ -51,22 +65,22 @@ const ProductThree = () => {
                       <label for="star1" title="text">1 star</label>
                   </div>
                   <p>(1 Customer Review)</p>
-              </div> */}
+              </div>
               <div className="price-content">
-                  <p>Rs.1500.00/-</p> <span>Rs.999.00/-</span>
+              <p>Rs.1500.00/-</p> <span>Rs.{routerData.price}/-</span>
               </div>
               <p>
               A Hydrating hyaluronic gel face cream infuse with watermelon extract help with retaining moisture.its anti- aging properties,leaves the face plumps and radiant for hours.
                 </p>
               <div className="product-cart">
-                  <div className="product-cart-btn">
+                  {/* <div className="product-cart-btn">
                       <button className="less-cart">-</button>
                       <input type="text" name="" id="" value="1"/>
                       <button className="less-cart">+</button>
-                  </div>
+                  </div> */}
                   <div className="add-cart-btn">
-                      <button>Add To Cart</button>
-                      <button className="buy">Buy Now</button>
+                  <button type='button' onClick={() => addToCart(routerData.id)}>Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}</button>
+                  <button type='button' onClick={()=>navigate("/addtoCart")} className="buy">Buy Now</button>
                   </div>
               </div>
               <div className="wishlist-btn">
@@ -80,10 +94,12 @@ const ProductThree = () => {
                   <div className="share-icon">
                       <p>Share: </p>
                       <div className="social-icon-1">
-                          <i className="fa-brands fa-facebook"></i>
-                          <i className="fa-brands fa-twitter"></i>
-                          <i className="fa-brands fa-instagram"></i>
-                      </div>
+                          <Link to="https://www.facebook.com/belladoreluxury" target='_blank'>     <i className="fa-brands fa-facebook"></i></Link>
+                          <Link to="">
+              <i className="fa-brands fa-youtube"></i>
+            </Link>
+                         <Link to="https://www.instagram.com/belladoreluxury/?igshid=MzRlODBiNWFlZA%3D%3D" target='_blank'>  <i className="fa-brands fa-instagram"></i></Link>
+                          </div>
                   </div>
               </div>
           </div>
@@ -92,25 +108,40 @@ const ProductThree = () => {
               <div className="accordion">
                 <hr/>
                 <div className="container-1">
-                  <div className="label">Description</div>
-                  <div className="content">
+                <div className="label" onClick={()=>setThreeAcc(!threeAcc)}>Description <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                {
+                    threeAcc&&(
+<div className="content">
                   A Hydrating hyaluronic gel face cream infuse with watermelon extract help with retaining moisture.its anti- aging properties,leaves the face plumps and radiant for hours.
                   </div>
+                    )
+                }
+                  
                 </div>
                 <hr/>
                 <div className="container-1">
-                  <div className="label">How To Use</div>
-                  <div className="content">
-                  After washing your face, use a small quantity and massage evenly on your face and neck
-            </div>
-                </div>
-                <hr/>
-                <div className="container-1">
-                  <div className="label">Ingredients</div>
-                  <div className="content"> 
-                  Aloe Barbadensis Leaf Extract ,Helianthus Annuus (Sunflower) Seed Oil,Propylene Glycol Dicaprate,Dimethicone,Glycerin,Prunus Amygdalus Dulcis (Sweet Almond) Oil,Sodium Benzoate,ALLANTOIN,Tocopheryl Acetate.Morus Alba Root,Citrullus Lanatus,Prunus Armeniaca (Apricot) Kernel Oil ,Disodium EDTA
-
+                  <div className="label" onClick={()=>setThreeAcc1(!threeAcc1)}>How To Use <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                  {
+                    threeAcc1&&(
+                        <div className="content">
+                        After washing your face, use a small quantity and massage evenly on your face and neck
                   </div>
+                    )
+                  }
+                 
+                </div>
+                <hr/>
+                <div className="container-1">
+                  <div className="label" onClick={()=>setThreeAcc2(!threeAcc2)}>Ingredients <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                  {
+                    threeAcc2&&(
+                        <div className="content"> 
+                        Aloe Barbadensis Leaf Extract ,Helianthus Annuus (Sunflower) Seed Oil,Propylene Glycol Dicaprate,Dimethicone,Glycerin,Prunus Amygdalus Dulcis (Sweet Almond) Oil,Sodium Benzoate,ALLANTOIN,Tocopheryl Acetate.Morus Alba Root,Citrullus Lanatus,Prunus Armeniaca (Apricot) Kernel Oil ,Disodium EDTA
+      
+                        </div>
+                    )
+                  }
+                 
                 </div>
                 <hr/>
                

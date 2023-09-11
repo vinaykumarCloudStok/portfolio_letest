@@ -7,10 +7,10 @@ import InstaSlider from './instaSlider/InstaSlider'
 import HomeBlog from './homeblog/HomeBlog'
 
 
-const Home = () => {
+const Home = ({size, setShow}) => {
   return (
     <>
-<Layout >
+<Layout size={size} setShow={setShow} >
 <BannerScreen/>
 <HomeAbout/>
 <OurProducts/>

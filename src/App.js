@@ -30,12 +30,14 @@ import Blog10 from "./pages/blog/Blog10";
 import Blog11 from "./pages/blog/Blog11";
 import Blog12 from "./pages/blog/Blog12";
 
-
+import { ShopContextProvider } from "./context/shop-context";
+import Payment from "./pages/payment/Payment";
 
 function App() {
 
 
   return (
+    <ShopContextProvider>
     <BrowserRouter>
        <ScrollToTop>
        <Routes>
@@ -64,13 +66,14 @@ function App() {
       <Route exact path="/blog10" element={<Blog10/>} />
       <Route exact path="/blog11" element={<Blog11/>} />
       <Route exact path="/blog12" element={<Blog12/>} />
-     
+     <Route exact path="/payment" element={<Payment/>}/>
       <Route exact path="/allProduct" element={<AllProduct/>} />
       <Route path="*" element={<PageNotFound/>}/>
     </Routes>
        </ScrollToTop>
   
     </BrowserRouter>
+    </ShopContextProvider>
   );
 }
 

@@ -71,7 +71,7 @@ const HomeBlog = () => {
     // centerMode: true,
     dots: true,
     infinite: true,
-
+    // centerPadding:"5px",  
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,

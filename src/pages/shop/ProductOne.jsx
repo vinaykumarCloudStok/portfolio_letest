@@ -1,44 +1,55 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 
 import Layout from '../../layout/Layout'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import {BsChevronDown} from 'react-icons/bs'
 import oneproduct from '../../assets/vcb.JPG'
-const ProductOne = () => {
+import { ShopContext } from '../../context/shop-context'
+const ProductOne = (props) => {
+  const navigate = useNavigate()
+  const {state} = useLocation()
+    const [oneAcc,setOneAcc] = useState(false)
+    const [oneAcc1,setOneAcc1] = useState(false)
+    const [oneAcc2,setOneAcc2] = useState(false)
+    const routeData = state?.newData
+    console.log(routeData)
+    const { addToCart, cartItems } = useContext(ShopContext);
+
+    const cartItemCount = cartItems[routeData.id];
   return (
     <Layout>
-      <div class="hero-container">
-            <h1 class="hero-heading">Shop</h1>
+      <div className="hero-container">
+            <h1 className="hero-heading">Shop</h1>
         </div>
       <div className="shop-category-section">
         <section className='section'>
-        <ul class="breadcrumb">
+        <ul className="breadcrumb">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/shop">Shop</Link></li>
             <li><Link to="/product">Products</Link></li>
             <li>Vitamin C Serum</li>
         </ul>
-        <div class="product-list-container">
-              <div class="product-list-left">
-                  <div class="product-slider-container">
-                      <div class="product-list-slider-img">
-                          <img src={oneproduct} alt=""/>
+        <div className="product-list-container">
+              <div className="product-list-left">
+                  <div className="product-slider-container">
+                      <div className="product-list-slider-img">
+                      <img src={routeData.productImage} alt=""/>
                       </div>
-                      <div class="product-list-slider-img">
-                      <img src={oneproduct} alt=""/>
+                      <div className="product-list-slider-img">
+                      <img src={routeData.productImage} alt=""/>
                       </div>
-                      <div class="product-list-slider-img">
-                      <img src={oneproduct} alt=""/>
+                      <div className="product-list-slider-img">
+                      <img src={routeData.productImage} alt=""/>
                       </div>
                   </div>
-                  <div class="product-list-img">
-
-                  <img src={oneproduct} alt=""/>
+                  <div className="product-list-img">
+                  <img src={routeData.productImage} alt=""/>
                   </div>
               </div>
-              <div class="product-list-right">
-                  <h1>Vitamin C Serum(100ml)</h1>
-                  {/* <div class="rate-container">
-                      <div class="rate">
+              <div className="product-list-right">
+                  <h1>{routeData.productName}(100ml)</h1>
+                  <div className="rate-container">
+                      <div className="rate">
 
                           <input type="radio" id="star5" name="rate" value="5" />
                           <label for="star5" title="text">5 stars</label>
@@ -52,67 +63,83 @@ const ProductOne = () => {
                           <label for="star1" title="text">1 star</label>
                       </div>
                       <p>(1 Customer Review)</p>
-                  </div> */}
-                  <div class="price-content">
-                      <p>Rs.1500.00/-</p> <span>Rs.1199.00/-</span>
+                  </div>
+                  <div className="price-content">
+                  <p>Rs.1500.00/-</p> <span>Rs.{routeData.price}/-</span>
                   </div>
                   <p>
                   Vitamin C serums have the potential to improve skin's appearance by preventing wrinkling and reducing the appearance of hyperpigmented areas.
                   </p>
-                  <div class="product-cart">
-                      <div class="product-cart-btn">
-                          <button class="less-cart">-</button>
+                  <div className="product-cart">
+                      {/* <div className="product-cart-btn">
+                          <button className="less-cart">-</button>
                           <input type="text" name="" id="" value="1"/>
-                          <button class="less-cart">+</button>
-                      </div>
-                      <div class="add-cart-btn">
-                          <button>Add To Cart</button>
-                          <button class="buy">Buy Now</button>
+                          <button className="less-cart">+</button>
+                      </div> */}
+                      <div className="add-cart-btn">
+                      <button type='button' onClick={() => addToCart(routeData.id)}>Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}</button>
+                          <button type='button' onClick={()=>navigate("/addtoCart")} className="buy">Buy Now</button>
                       </div>
                   </div>
-                  <div class="wishlist-btn">
+                  <div className="wishlist-btn">
                       <Link to="/wishlist">
-                          <p><i class="fa-solid fa-heart"></i> Add to Wishlist</p>
+                          <p><i className="fa-solid fa-heart"></i> Add to Wishlist</p>
                       </Link>
                   </div>
-                  <div class="sku">
+                  <div className="sku">
                       <p>SKU: <span>MNK-012</span> </p>
-                      <p>Category: <span>Vanilla & Cinnamon  body lotion</span> </p>
-                      <div class="share-icon">
+                      <p>Category: <span>Body Care</span> </p>
+                      <div className="share-icon">
                           <p>Share: </p>
-                          <div class="social-icon-1">
-                              <i class="fa-brands fa-facebook"></i>
-                              <i class="fa-brands fa-twitter"></i>
-                              <i class="fa-brands fa-instagram"></i>
+                          <div className="social-icon-1">
+                          <Link to="https://www.facebook.com/belladoreluxury" target='_blank'>     <i className="fa-brands fa-facebook"></i></Link>
+                          <Link to="">
+              <i className="fa-brands fa-youtube"></i>
+            </Link>
+                         <Link to="https://www.instagram.com/belladoreluxury/?igshid=MzRlODBiNWFlZA%3D%3D" target='_blank'>  <i className="fa-brands fa-instagram"></i></Link>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
 
-          <div class="product-description">
-                  <div class="accordion">
+          <div className="product-description">
+                  <div className="accordion">
                     <hr/>
-                    <div class="container-1">
-                      <div class="label">Description</div>
-                      <div class="content">
+                    <div className="container-1">
+                      <div className="label" onClick={()=>setOneAcc(!oneAcc)}>Description <BsChevronDown className='icon-down' style={{fontSize:"1.5rem"}}/></div>
+                      {
+                        oneAcc &&(
+                            <div className="content">
                       Vitamin C serums have the potential to improve skin's appearance by preventing wrinkling and reducing the appearance of hyperpigmented areas.
                       </div>
+                        )
+                      }
                     </div>
                     <hr/>
-                    <div class="container-1">
-                      <div class="label">How To Use</div>
-                      <div class="content">
+                    <div className="container-1">
+                      <div className="label" onClick={()=>setOneAcc1(!oneAcc1)}>How To Use <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                      {
+                        oneAcc1 &&(
+                            <div className="content">
                         
 Tap your skin gently for 30-60 seconds until the serum is absorbed. After you’ve rubbed the serum onto your skin, place your fingers on your cheek and press your skin in small, circular motions
                 </div>
+                        )
+                      }
+                      
                     </div>
                     <hr/>
-                    <div class="container-1">
-                      <div class="label">Ingredients</div>
-                      <div class="content">
-                      Aqua,2-Bromo-2-Nitropropane-1 ( bronopol),ALLANTOIN,Disodium EDTA,Sodium Benzoate,Sodium Ascorbyl Phosphate,Curcuma Longa Root Extract,Morus Alba Root,Aloe Barbadensis Leaf Extract,Glycerol/Dlycerin,Kojic Acid,Hydroxyethyl Cellulose,Citric acid,Perfume
-                      </div>
+                    <div className="container-1">
+                      <div className="label" onClick={()=>setOneAcc2(!oneAcc2)}>Ingredients <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                      {
+                        oneAcc2 && (
+                            <div className="content">
+                            Aqua,2-Bromo-2-Nitropropane-1 ( bronopol),ALLANTOIN,Disodium EDTA,Sodium Benzoate,Sodium Ascorbyl Phosphate,Curcuma Longa Root Extract,Morus Alba Root,Aloe Barbadensis Leaf Extract,Glycerol/Dlycerin,Kojic Acid,Hydroxyethyl Cellulose,Citric acid,Perfume
+                            </div>
+                        )
+                      }
+                    
                     </div>
                     <hr/>
                    

@@ -1,26 +1,38 @@
 .about-container{
     padding: 8rem 0 8rem 0;
+    /* display: flex; */
+   position: relative;
+  }
+  .about-left{
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
-  .about-left img{
-  height: 700px;
-  /* width: 100%; */
+  .aboot-new-content{
+    width: 50%;
+  }
+  .one-img-container{
+    width: 45%;
+  }
+   .one-img{
+    height: 700px;
+  width: 100%;
   display: block;
   }
+  .about-second-img img{
+    width: 100%;
+    display: block;
+    height: 550px;
+    /* margin-top: 6rem; */
+  }
   .about-right{
-    margin-left: 3rem;
+    width: 45%;
+    position: absolute;
+    bottom: 10rem;
   }
-  .about-right h1{
-  font-size: 3.1rem;
   
-  }
-  .about-left-heading{
-      font-size:2.3rem;
-      margin-top:2rem;
-  }
   .watch-btn{
-    padding-bottom: 4rem;
+    padding: 4rem 0 4rem 0;
   }
   
   .watch:hover{
@@ -29,18 +41,12 @@
     color: white;
     border: 1px solid #dbdbdd;
   }
-  .about-right p{
-    padding: 1.8rem 0rem 1.8rem 0rem;
-    line-height: 2rem;
-    text-align: left;
-  }
+ 
   .about-right a{
     color: #bf9020;
     font-weight: bold;
   }
-  .about-right img{
-    width: 100%;
-  }
+  
   @media (max-width:1200px) {
     .about-container{
       flex-direction: column;
@@ -62,22 +68,36 @@
     }
   }
   @media (max-width:768px) {
-    .about-container{
+    
+    .about-left{
       flex-direction: column;
       /* flex-direction: column-reverse; */
     }
-    .about-left img{
-      width: 100%;
-      height: auto;
-    }
     .about-left-heading{
-      font-size: 2rem;
+      margin-top: 2rem;
     }
-    .about-right h1{
-      font-size: 2rem;
+    .watch-btn{
+      padding: 3rem 0 3rem 0;
+    }
+    .one-img{
+      height: auto;
+    width: 100%;
+    display: block;
+    }
+    .about-second-img img{
+      width: 100%;
+      display: block;
+      height: auto;
+      /* margin-top: 6rem; */
+    }
+    .aboot-new-content{
+      width: 100%;
+    }
+    .one-img-container{
+      width: 100%;
     }
     .about-right{
-      margin-top: 2rem;
-      margin-left: 0;
+   position: static;
+   width: 100%;
     }
   }

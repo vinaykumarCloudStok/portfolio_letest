@@ -7,12 +7,12 @@ const BlogOne = () => {
   const imgData = ['1', '2', '3', '4', '5', '6']
   return (
     <Layout>
-      <div class="hero-container">
-        <h1 class="hero-heading">Blog</h1>
+      <div className="hero-container">
+        <h1 className="hero-heading">Blog</h1>
       </div>
       <div className="shop-category-section">
         <section className='section'>
-          <ul class="breadcrumb">
+          <ul className="breadcrumb">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/blog">Blog</Link></li>
             <li>BlogDescription</li>

@@ -9,32 +9,33 @@ const HomeAbout = () => {
     <div className="section">
     <div className="about-container">
       <div className="about-left">
-        <img src={aboutleft} alt=""/>
-        <h1 className="about-left-heading">
+        <div className="one-img-container">
+        <img src={aboutleft} alt="" className='one-img'/>
+        </div>
+       
+        <div className="aboot-new-content">
+        <h1 className='about-left-heading'> Immerse yourself in
+          a world of
+          sophistication and
+          elegance as you
+          embark on your
+          skincare journey.</h1>
+        <div className="watch-btn">
+         <button className="watch" onClick={()=>navigate('/about')}>Know More</button>
+        </div>
+        <div className="about-second-img">
+          <img src={aboutRight} alt=""/>
+        </div>
+        </div>
+      </div>
+      <div className="about-right">
+        <h1 className="about-right-heading">
           Discover the
           magic that
           happens when
           indulgence
           meets efficacy
         </h1>
-      </div>
-      <div className="about-right">
-        <h1>Belladore Med Provide Professional Spa And Beauty Service Affordable</h1>
-        <p>
-          Immerse yourself in
-          a world of
-          sophistication and
-          elegance as you
-          embark on your
-          skincare journey.
-         
-        </p>
-        <div className="watch-btn">
-         <button className="watch" onClick={()=>navigate('/about')}>Know More</button>
-        </div>
-        <div className="">
-          <img src={aboutRight} alt=""/>
-        </div>
       </div>
     </div>
   </div>

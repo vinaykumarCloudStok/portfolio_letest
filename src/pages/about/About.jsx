@@ -8,20 +8,20 @@ const About = () => {
   
   return (
     <Layout>
-     <div class="hero-container">
-    <h1 class="hero-heading">About Us</h1>
+     <div className="hero-container">
+    <h1 className="hero-heading">About Us</h1>
 </div>
-  <div class="about-main-container ">
-    <section class="section">
-      <ul class="breadcrumb">
+  <div className="about-main-container ">
+    <section className="section">
+      <ul className="breadcrumb">
         <li><Link to="/">Home</Link></li>
         <li>About Us</li>
       </ul>
-      <div class="about-page-section">
-          <div class="about-page-section-left">
+      <div className="about-page-section">
+          <div className="about-page-section-left">
               <img src={aboutPageBg} alt="about"/>
           </div>
-          <div class="about-page-section-right">
+          <div className="about-page-section-right">
               <h1>About Us</h1>
               <p>
                   Welcome to Belladore, where we believe every individual deserves to be adored and have their skin taken care of in the most exquisite manner. We aim to provide Link skincare regime that nourishes, hydrates, and helps you embrace your true self.

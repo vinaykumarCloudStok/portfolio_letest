@@ -64,7 +64,7 @@
 
 .blog-card-body p {
  font-size: 1rem;
- width: 90%;
+ 
  padding-bottom: 1rem;
 }
 .user {
@@ -103,11 +103,15 @@
 
 @media (max-width:768px) {
   .blog-card{
-    width: 100%;
+    /* display: block !important; */
+    width: 95% !important;
+    margin-bottom: 4rem;
   }
   .blog-card-body{
-    width: 100%;
+    width: 100% !important;
     /* min-height: 0; */
+    /* padding-bottom: 3rem; */
+
     /* padding: 0; */
 
   }

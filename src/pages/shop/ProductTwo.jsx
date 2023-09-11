@@ -2,43 +2,57 @@ import React from 'react'
 import '../shop/productList.css'
 import Layout from '../../layout/Layout'
 import twoProduct from '../../assets/bcb.JPG'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import {BsChevronDown} from 'react-icons/bs'
+import { useState } from 'react'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/shop-context'
 const ProductTwo = () => {
+  const navigate = useNavigate()
+    const [twoAcc,setTwoAcc] = useState(false)
+    const [twoAcc1,setTwoAcc1] = useState(false)
+    const [twoAcc2,setTwoAcc2] = useState(false)
+    const {state} = useLocation()
+    const routeData = state?.newData
+    console.log(routeData)
+    const { addToCart, cartItems } = useContext(ShopContext);
+
+    const cartItemCount = cartItems[routeData.id];
   return (
     <Layout>
-    <div class="hero-container">
-          <h1 class="hero-heading">Shop</h1>
+    <div className="hero-container">
+          <h1 className="hero-heading">Shop</h1>
       </div>
     <div className="shop-category-section">
       <section className='section'>
-      <ul class="breadcrumb">
+      <ul className="breadcrumb">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/shop">Shop</Link></li>
           <li><Link to="/bodyProduct">Products</Link></li>
           <li>Vanilla & Cinnamon  body lotion</li>
       </ul>
-      <div class="product-list-container">
-            <div class="product-list-left">
-                <div class="product-slider-container">
-                    <div class="product-list-slider-img">
-                        <img src={twoProduct} alt=""/>
+      <div className="product-list-container">
+            <div className="product-list-left">
+                <div className="product-slider-container">
+                    <div className="product-list-slider-img">
+                    <img src={routeData.productImage} alt=""/>
                     </div>
-                    <div class="product-list-slider-img">
-                    <img src={twoProduct} alt=""/>
+                    <div className="product-list-slider-img">
+                    <img src={routeData.productImage} alt=""/>
                     </div>
-                    <div class="product-list-slider-img">
-                    <img src={twoProduct} alt=""/>
+                    <div className="product-list-slider-img">
+                    <img src={routeData.productImage} alt=""/>
                     </div>
                 </div>
-                <div class="product-list-img">
+                <div className="product-list-img">
 
-                <img src={twoProduct} alt=""/>
+                <img src={routeData.productImage} alt=""/>
                 </div>
             </div>
-            <div class="product-list-right">
-                <h1>Vanilla & Cinnamon  body lotion(100ml)</h1>
-                {/* <div class="rate-container">
-                    <div class="rate">
+            <div className="product-list-right">
+                <h1>{routeData.productName}(100ml)</h1>
+                <div className="rate-container">
+                    <div className="rate">
 
                         <input type="radio" id="star5" name="rate" value="5" />
                         <label for="star5" title="text">5 stars</label>
@@ -52,69 +66,86 @@ const ProductTwo = () => {
                         <label for="star1" title="text">1 star</label>
                     </div>
                     <p>(1 Customer Review)</p>
-                </div> */}
-                <div class="price-content">
-                    <p>Rs.1500.00/-</p> <span>Rs.1199.00/-</span>
+                </div>
+                <div className="price-content">
+                    <p>Rs.1500.00/-</p> <span>Rs.{routeData.price}/-</span>
                 </div>
                 <p>
-                This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind                                                                                                                                
+                {routeData.para}                                                                                                                            
                         </p>
-                <div class="product-cart">
-                    <div class="product-cart-btn">
-                        <button class="less-cart">-</button>
+                <div className="product-cart">
+                    {/* <div className="product-cart-btn">
+                        <button className="less-cart">-</button>
                         <input type="text" name="" id="" value="1"/>
-                        <button class="less-cart">+</button>
-                    </div>
-                    <div class="add-cart-btn">
-                        <button>Add To Cart</button>
-                        <button class="buy">Buy Now</button>
+                        <button className="less-cart">+</button>
+                    </div> */}
+                    <div className="add-cart-btn">
+                        <button type='button' onClick={() => addToCart(routeData.id)}>Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}</button>
+                        <button type='button' onClick={()=>navigate("/addtoCart")} className="buy">Buy Now</button>
                     </div>
                 </div>
-                <div class="wishlist-btn">
-                    <Link to="wishlist.html">
-                        <p><i class="fa-solid fa-heart"></i> Add to Wishlist</p>
+                <div className="wishlist-btn">
+                    <Link to="/wishlist">
+                        <p><i className="fa-solid fa-heart"></i> Add to Wishlist</p>
                     </Link>
                 </div>
-                <div class="sku">
+                <div className="sku">
                     <p>SKU: <span>MNK-012</span> </p>
                     <p>Category: <span>Vanilla & Cinnamon  body lotion</span> </p>
-                    <div class="share-icon">
+                    <div className="share-icon">
                         <p>Share: </p>
-                        <div class="social-icon-1">
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
+                        <div className="social-icon-1">
+                          <Link to="https://www.facebook.com/belladoreluxury" target='_blank'>     <i className="fa-brands fa-facebook"></i></Link>
+                          <Link to="">
+              <i className="fa-brands fa-youtube"></i>
+            </Link>
+                         <Link to="https://www.instagram.com/belladoreluxury/?igshid=MzRlODBiNWFlZA%3D%3D" target='_blank'>  <i className="fa-brands fa-instagram"></i></Link>
+                          </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="product-description">
-              <div class="accordion">
+        <div className="product-description">
+              <div className="accordion">
                 <hr/>
-                <div class="container-1">
-                  <div class="label">Description</div>
-                  <div class="content">
-                      This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind                                                                                                                                
-                  </div>
-                </div>
-                <hr/>
-                <div class="container-1">
-                  <div class="label">How To Use</div>
-                  <div class="content">
-                  Take generous quantity and 
-apply all over body. 
-Massage gently in circular 
-motion until absorbed
-            </div>
-                </div>
-                <hr/>
-                <div class="container-1">
-                  <div class="label">Ingredients</div>
-                  <div class="content">
-                  Glycerol/Dlycerin, Aloe barbadensis,Olea europaea, Theobroma, Cetearyl alcohol, Stearic acid, Glyceryl mono stearate, Perfum, Tocopheryl acetate, Potassium Sorbate, Propylen Glycol, Vanilla Planifolia, perfume
+                <div className="container-1">
+                <div className="label" onClick={()=>setTwoAcc(!twoAcc)}>Description <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                {
+                    twoAcc&&(
+                        <div className="content">
+                        This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind                                                                                                                                
                     </div>
+                    )
+                }
+                 
+                </div>
+                <hr/>
+                <div className="container-1">
+                  <div className="label" onClick={()=>setTwoAcc1(!twoAcc1)}>How To Use <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                  {
+                    twoAcc1&&(
+                        <div className="content">
+                        Take generous quantity and 
+      apply all over body. 
+      Massage gently in circular 
+      motion until absorbed
+                  </div>
+                    )
+                  }
+                 
+                </div>
+                <hr/>
+                <div className="container-1">
+                  <div className="label" onClick={()=>setTwoAcc2(!twoAcc2)}>Ingredients <BsChevronDown style={{fontSize:"1.5rem"}}/></div>
+                  {
+                    twoAcc2&&(
+                        <div className="content">
+                        Glycerol/Dlycerin, Aloe barbadensis,Olea europaea, Theobroma, Cetearyl alcohol, Stearic acid, Glyceryl mono stearate, Perfum, Tocopheryl acetate, Potassium Sorbate, Propylen Glycol, Vanilla Planifolia, perfume
+                          </div>
+                    )
+                  }
+                 
                 </div>
                 <hr/>
                

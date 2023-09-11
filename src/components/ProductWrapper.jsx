@@ -4,39 +4,39 @@ import '../components/productWrapper.css'
 const ProductWrapper = () => {
   return (
    <Layout>
-      <div class="hero-container">
-            <h1 class="hero-heading">Shop</h1>
+      <div className="hero-container">
+            <h1 className="hero-heading">Shop</h1>
         </div>
       <div className="shop-category-section">
         <section className='section'>
-        <ul class="breadcrumb">
+        <ul className="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="product.html">Products</a></li>
             <li>Vitamin C Serum</li>
         </ul>
-        <div class="product-list-container">
-              <div class="product-list-left">
-                  <div class="product-slider-container">
-                      <div class="product-list-slider-img">
+        <div className="product-list-container">
+              <div className="product-list-left">
+                  <div className="product-slider-container">
+                      <div className="product-list-slider-img">
                           <img src="./images/vc.JPG" alt=""/>
                       </div>
-                      <div class="product-list-slider-img">
+                      <div className="product-list-slider-img">
                           <img src="./images/vc.JPG" alt=""/>
                       </div>
-                      <div class="product-list-slider-img">
+                      <div className="product-list-slider-img">
                           <img src="./images/vc.JPG" alt=""/>
                       </div>
                   </div>
-                  <div class="product-list-img">
+                  <div className="product-list-img">
 
                       <img src="./images/vc.JPG" alt=""/>
                   </div>
               </div>
-              <div class="product-list-right">
+              <div className="product-list-right">
                   <h1>Vitamin C Serum(100ml)</h1>
-                  <div class="rate-container">
-                      <div class="rate">
+                  <div className="rate-container">
+                      <div className="rate">
 
                           <input type="radio" id="star5" name="rate" value="5" />
                           <label for="star5" title="text">5 stars</label>
@@ -51,54 +51,54 @@ const ProductWrapper = () => {
                       </div>
                       <p>(1 Customer Review)</p>
                   </div>
-                  <div class="price-content">
+                  <div className="price-content">
                       <p>Rs.1500.00/-</p> <span>Rs.1199.00/-</span>
                   </div>
                   <p>This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind</p>
-                  <div class="product-cart">
-                      <div class="product-cart-btn">
-                          <button class="less-cart">-</button>
+                  <div className="product-cart">
+                      <div className="product-cart-btn">
+                          <button className="less-cart">-</button>
                           <input type="text" name="" id="" value="1"/>
-                          <button class="less-cart">+</button>
+                          <button className="less-cart">+</button>
                       </div>
-                      <div class="add-cart-btn">
+                      <div className="add-cart-btn">
                           <button>Add To Cart</button>
-                          <button class="buy">Buy Now</button>
+                          <button className="buy">Buy Now</button>
                       </div>
                   </div>
-                  <div class="wishlist-btn">
+                  <div className="wishlist-btn">
                       <a href="wishlist.html">
-                          <p><i class="fa-solid fa-heart"></i> Add to Wishlist</p>
+                          <p><i className="fa-solid fa-heart"></i> Add to Wishlist</p>
                       </a>
                   </div>
-                  <div class="sku">
+                  <div className="sku">
                       <p>SKU: <span>MNK-012</span> </p>
                       <p>Category: <span>Vanilla & Cinnamon  body lotion</span> </p>
-                      <div class="share-icon">
+                      <div className="share-icon">
                           <p>Share: </p>
-                          <div class="social-icon-1">
-                              <i class="fa-brands fa-facebook"></i>
-                              <i class="fa-brands fa-twitter"></i>
-                              <i class="fa-brands fa-instagram"></i>
+                          <div className="social-icon-1">
+                              <i className="fa-brands fa-facebook"></i>
+                              <i className="fa-brands fa-twitter"></i>
+                              <i className="fa-brands fa-instagram"></i>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
 
-          <div class="product-description">
-                  <div class="accordion">
+          <div className="product-description">
+                  <div className="accordion">
                     <hr/>
-                    <div class="container">
-                      <div class="label">Description</div>
-                      <div class="content">
+                    <div className="container">
+                      <div className="label">Description</div>
+                      <div className="content">
                           This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind  
                       </div>
                     </div>
                     <hr/>
-                    <div class="container">
-                      <div class="label">How To Use</div>
-                      <div class="content">
+                    <div className="container">
+                      <div className="label">How To Use</div>
+                      <div className="content">
                           Take generous quantity and 
 apply all over body. 
 Massage gently in circular 
@@ -106,9 +106,9 @@ motion until absorbed
                 </div>
                     </div>
                     <hr/>
-                    <div class="container">
-                      <div class="label">Ingredients</div>
-                      <div class="content"> Glycerol/Dlycerin, Aloe barbadensis,Olea europaea, Theobroma, Cetearyl alcohol, Stearic acid, Glyceryl mono stearate, Perfum, Tocopheryl acetate, Potassium Sorbate, Propylen Glycol, Vanilla Planifolia, perfume</div>
+                    <div className="container">
+                      <div className="label">Ingredients</div>
+                      <div className="content"> Glycerol/Dlycerin, Aloe barbadensis,Olea europaea, Theobroma, Cetearyl alcohol, Stearic acid, Glyceryl mono stearate, Perfum, Tocopheryl acetate, Potassium Sorbate, Propylen Glycol, Vanilla Planifolia, perfume</div>
                     </div>
                     <hr/>
                    

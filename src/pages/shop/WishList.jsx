@@ -18,12 +18,12 @@ const WishList = () => {
     ]
   return (
    <Layout>
-     <div class="hero-container">
-            <h1 class="hero-heading">WishList</h1>
+     <div className="hero-container">
+            <h1 className="hero-heading">WishList</h1>
         </div>
-     <div class="shop-category-section">
-        <section class="section">
-            <ul class="breadcrumb">
+     <div className="shop-category-section">
+        <section className="section">
+            <ul className="breadcrumb">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/shop">Home</Link></li>
               <li><Link to="/product/listone">Products</Link></li>
@@ -32,26 +32,26 @@ const WishList = () => {
           <div className="wish-heading">
             <h1>Your Product Wishlist</h1>
           </div>
-            <div class="product-container">
+            <div className="product-container">
                 {
                  productData.map((el,i)=>(
-                    <article class="card">
-                    <header class="card__thumb">
+                    <article className="card">
+                    <header className="card__thumb">
                         <Link to={el.route}><img src={el.img} alt="skin"/></Link>
                     </header>
-                    <date class="card__date">
-                        <span class="card__date__day">29%</span>
+                    <date className="card__date">
+                        <span className="card__date__day">29%</span>
                     </date>
-                    <div class="card__body">
+                    <div className="card__body">
                       
-                        <h2 class="card__title"><Link to={el.route}>{el.head}</Link></h2>
-                        <div class="card__subtitle"></div>
+                        <h2 className="card__title"><Link to={el.route}>{el.head}</Link></h2>
+                        <div className="card__subtitle"></div>
                         
-                        <p class="card__description">{el.para}</p>
-                        <button class="select-btn" onClick={()=>navigate('/addtoCart')}>Cart <i class="fa-solid fa-cart-shopping"></i> </button>
+                        <p className="card__description">{el.para}</p>
+                        <button className="select-btn" onClick={()=>navigate('/addtoCart')}>Cart <i className="fa-solid fa-cart-shopping"></i> </button>
                     </div>
-                    <footer class="card__footer">
-                        <span class="ion-clock"></span>
+                    <footer className="card__footer">
+                        <span className="ion-clock"></span>
                     </footer>
                 </article>
                  ))

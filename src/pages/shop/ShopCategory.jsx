@@ -7,18 +7,18 @@ import two from '../../assets/Aloe-Lavender-Lip-Balm_3-1-430x430.jpg'
 const ShopCategory = () => {
   return (
    <Layout>
-     <div class="hero-container">
-            <h1 class="hero-heading">Shop</h1>
+     <div className="hero-container">
+            <h1 className="hero-heading">Shop</h1>
         </div>
 
-     <div class="shop-category-section">
-        <section class="section">
-            <ul class="breadcrumb">
+     <div className="shop-category-section">
+        <section className="section">
+            <ul className="breadcrumb">
               <li><Link to="/">Home</Link></li>
               <li>Shop</li>
             </ul>
-            <div class="shop-category-container">
-                <figure class="snip1571">
+            <div className="shop-category-container">
+                <figure className="snip1571">
                     <img src={one} alt="sample21" />
                     <figcaption>
                       <h3>Skin Care(2)</h3>
@@ -26,7 +26,7 @@ const ShopCategory = () => {
                     <Link to="/product"></Link>
                   </figure>
                 
-                  <figure class="snip1571"><img src={two} alt="sample104" />
+                  <figure className="snip1571"><img src={two} alt="sample104" />
                     <figcaption>
                       <h3>Body Lotion(1)</h3>
                     </figcaption>

@@ -3,55 +3,27 @@ import Layout from '../../layout/Layout'
 import { Link, useNavigate } from 'react-router-dom'
 
 import two from '../../assets/bcb.JPG'
+import BodyProductCard from '../../components/BodyProductCard'
+import { BodyProductData } from '../../BodyProductData'
 
 const BodyProduct = () => {
-    const navigate = useNavigate()
-    const productData = [
-        {
-            img:two,
-            head:"Vanilla body lotion",
-            para:"This creamy indulgent body lotion nourishes and moisturizes your skin to make it soft and smooth. The vanilla and cinnamon instantly refresh your body and your mind",
-            price:"Rs. 1099/-",
-            route:"/product/listtwo"
-        },
-    ]
+    
   return (
    <Layout>
-      <div class="hero-container">
-            <h1 class="hero-heading">Shop</h1>
+      <div className="hero-container">
+            <h1 className="hero-heading">Shop</h1>
         </div>
-     <div class="shop-category-section">
-        <section class="section">
-            <ul class="breadcrumb">
+     <div className="shop-category-section">
+        <section className="section">
+            <ul className="breadcrumb">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/shop">Shop</Link></li>
               <li>Products</li>
             </ul>
-            <div class="product-container">
-                {
-                 productData.map((el,i)=>(
-                    <article class="card">
-                    <header class="card__thumb">
-                        <Link to={el.route}><img src={el.img} alt="skin"/></Link>
-                    </header>
-                    <date class="card__date">
-                        <span class="card__date__day">29%</span>
-                    </date>
-                    <div class="card__body">
-                      
-                        <h2 class="card__title"><Link to={el.route}>{el.head}</Link></h2>
-                        <div class="card__subtitle"></div>
-                        
-                        <p class="card__description">{el.para}</p>
-                        <button class="select-btn" onClick={()=>navigate('/addtoCart')}>Cart <i class="fa-solid fa-cart-shopping"></i> </button>
-                    </div>
-                    <footer class="card__footer">
-                        <span class="ion-clock"></span>
-                    </footer>
-                </article>
-                 ))
-                }
-             
+            <div className="new-wrapper-card">
+            {BodyProductData.map((product) => (
+          <BodyProductCard data={product} />
+        ))}
           </div>
           </section>
      </div>
